@@ -12,7 +12,7 @@ interface IHeader {
 export default function Header({visible, onVisible}:IHeader){
 
     return(
-        <header className="flex items-center justify-between py-6 relative">
+        <header className="flex items-center justify-between py-6 relative scale-up-center">
             <Image src={Logo} alt='logo' className='w-36 h-auto'/>
             <ul className="flex items-center justify-center gap-10 max-md:hidden">
                 <li className="text-[#555555]">
