@@ -4,13 +4,12 @@ import { BsArrowRightCircle } from "react-icons/bs";
 
 export default function Projects(){
     return(
-        <div className="w-full m-auto px-2 max-md:px-6 max-w-5xl">
-            <Header />
+        
             <main className="flex mt-10 gap-12">
                 <div className="flex w-full items-center justify-center flex-col">
-                    <h1 className="text-3xl font-semibold">* PRINCIPAIS PROJETOS *</h1>
+                    <h1 className="text-3xl font-semibold text-center">* PRINCIPAIS PROJETOS *</h1>
                     <div className="my-10">
-                        <ul className="grid grid-cols-3 gap-10">
+                        <ul className="grid grid-cols-3 gap-10 max-lg:grid-cols-2 max-sm:grid-cols-1">
                             <li className="bg-[#1B1B1B] p-3 rounded-2xl">
                                 <div className="w-52 h-40 bg-[#7B9CF0] rounded-2xl "></div>
                                 <div className='flex flex-col p-1'>
@@ -110,7 +109,6 @@ export default function Projects(){
                     </div>
                 </div>
             </main>
-            <Footer />
-        </div>
+          
     );
 }

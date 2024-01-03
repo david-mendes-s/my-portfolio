@@ -1,15 +1,46 @@
-'use clinte'
-export default function Header(){
+'use client'
+import { BsList, BsXLg } from 'react-icons/bs';
+import Link from 'next/link';
+import Image from 'next/image';
+import Logo from '../../public/Logo.png';
+
+interface IHeader {
+    visible: boolean;
+    onVisible: () => void;
+}
+
+export default function Header({visible, onVisible}:IHeader){
+
     return(
-        <header className="flex items-center justify-between py-6">
-            <h3>Logo</h3>
+        <header className="flex items-center justify-between py-6 relative">
+            <Image src={Logo} alt='logo' className='w-36 h-auto'/>
             <ul className="flex items-center justify-center gap-10 max-md:hidden">
-                <li >Home</li>
-                <li className="text-[#555555]">Sobre</li>
+                <li className="text-[#555555]">
+                    <Link href="/">Home</Link>
+                </li>
+                <li className="text-[#555555]">
+                    <Link href="/about">Sobre</Link>
+                </li>
                 <li className="text-[#555555]">Habilidades</li>
-                <li className="text-[#555555]">Contato</li>
+                <li className="text-[#555555]">
+                    <Link href="/contact">Contato</Link>
+                </li>
             </ul>
-            <button className="bg-[#323232] px-5 py-2 rounded-md text-[14px] text-white">Projetos</button>
+            <Link href="/projects" className='max-md:hidden'>
+                <button 
+                    type='button'  
+                    className="bg-[#323232] px-5 py-2 rounded-md text-[14px] text-white">
+                    Projetos
+                </button>
+            </Link>
+            <button 
+                onClick={() => onVisible()}
+                className='hidden max-md:flex'>
+                    {visible === true ? <></> : <BsList size={26} color={'#fff'}/>}
+            </button>
+
+            
+            
         </header>
     );
 }

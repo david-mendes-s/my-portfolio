@@ -1,13 +1,13 @@
+
 import {BsFillEnvelopeAtFill, BsFillTelephonePlusFill, BsGithub, BsLinkedin} from 'react-icons/bs';
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
 export default function Contact(){
     return(
-        <div className="w-full m-auto px-2 max-md:px-6 max-w-5xl">
-            <Header />
-            <main className='flex mt-10 gap-12'>
-                <div>
+       
+            <main className='flex mt-10 gap-12 max-lg:flex-col max-lg:items-center'>
+                <div className='flex flex-col max-lg:order-2'>
                     <h3 className=''>INFORMAÇÕES DE CONTATO</h3>
                     <ul className='flex flex-col gap-4 mt-6'>
                         <li className='flex gap-4'>
@@ -43,7 +43,7 @@ export default function Contact(){
                         </li>
                     </ul>
                 </div>
-                <div className='w-full'>
+                <div className='w-full max-lg:w-2/3 max-sm:w-full'>
                     <form className='bg-[#272727] w-full rounded-2xl px-6 py-8'>
                         <h1 className='mb-5 text-3xl font-semibold'>Vamos trabalhar <strong className='text-[#5873EC]'>juntos.</strong></h1>
                         <input type="text" className='w-full px-3 py-3 bg-[#232323] text-xs outline-none rounded-md' placeholder='Nome*' />
@@ -54,8 +54,7 @@ export default function Contact(){
                     </form>
                 </div>
             </main>
-            <Footer />
-        </div>
+        
         
     );
 }

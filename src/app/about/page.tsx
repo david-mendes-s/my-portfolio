@@ -1,14 +1,12 @@
+
 import {BsGithub, BsLinkedin, BsFillEnvelopeAtFill} from 'react-icons/bs';
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 
 export default function About(){
     return(
-        <div className="w-full m-auto px-2 max-md:px-6 max-w-5xl">
-            <Header />
+        
             <main className="flex mt-10 gap-12">
-                <div className="w-1/4">
-                    <div className="bg-[#1B1B1B] rounded-2xl p-6 flex flex-col items-center justify-center">
+                <div className="w-1/4 max-lg:hidden">
+                    <div className="bg-[#1B1B1B] rounded-2xl p-6 flex flex-col items-center justify-center ">
                         <div className="w-40 h-40 bg-[#7B9CF0] rounded-2xl "></div>
                         <h1 className="pt-2 text-xl mt-3 font-semibold">David Mendes</h1>
                         <p className="text-sm text-[#797979]">@david_andersonss</p>
@@ -26,7 +24,7 @@ export default function About(){
                         <button className="bg-[#323232] w-full px-4 py-2 mt-3 rounded-md text-sm">Contate-me</button>
                     </div>
                 </div>
-                <div className="w-3/4">
+                <div className="w-3/4 max-lg:w-full max-lg:">
                     <h1 className='text-xl'>SOBRE MIM</h1>
                     <p className="text-sm text-[#797979] mt-4">
                     It is a long established fact that a reader will be distracted 
@@ -120,7 +118,6 @@ export default function About(){
                     
                 </div>
             </main>
-            <Footer />
-        </div>
+        
     );
 }
