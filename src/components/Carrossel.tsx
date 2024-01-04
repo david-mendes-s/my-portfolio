@@ -6,10 +6,14 @@ interface ICarrossel {
     width: string,
 }
 
+interface ScrollerElement extends HTMLElement {
+  setAttribute(name: string, value: string): void;
+}
+
 export default function Carrossel({elements, width}: ICarrossel) {
 
 
-  const scrollers = useRef<HTMLDivElement[]>([]); // Cria um array de refs
+  const scrollers = useRef<ScrollerElement[]>([]); // Cria um array de refs
   /* const scroller = document.querySelectorAll(".scroller"); */
 
   useEffect(() => {
@@ -21,7 +25,7 @@ export default function Carrossel({elements, width}: ICarrossel) {
   function addAnimation() {
     scrollers.current?.forEach((element) => {
       if (element) {
-        element.setAttribute("data-animated", 'true');
+        element.setAttribute("data-animated", "true");
       }
     });
   }
@@ -31,7 +35,7 @@ export default function Carrossel({elements, width}: ICarrossel) {
       {/* Associa as refs aos elementos */}
       <div
         className={`max-w-[${width}px] scroller px-2`}
-        ref={(el) => (scrollers.current[0] = el as HTMLDivElement)}
+        ref={(el) => (scrollers.current[0] = el as ScrollerElement)}
       >
         <ul className="flex gap-4 scroll_inner">
             {elements.map((element, index) => (
