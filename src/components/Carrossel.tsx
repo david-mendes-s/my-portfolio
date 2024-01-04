@@ -23,7 +23,7 @@ export default function Carrossel({elements, width}: ICarrossel) {
   }, []); // Roda o efeito apenas uma vez na montagem
 
   function addAnimation() {
-    scrollers.current?.forEach((element: any) => {
+    scrollers.current?.forEach((element: any | never) => {
       if (element) {
         element?.setAttribute("data-animated", "true");
       }
