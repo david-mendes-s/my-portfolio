@@ -29,32 +29,7 @@ export default function Home() {
     "SPRINGBOOT",
   ]);
 
-  const icons = [
-    <IoLogoHtml5 size={50} color='#fff'/>, 
-    <IoLogoCss3 size={50} color='#fff'/>,
-    <IoLogoJavascript size={50} color='#fff'/>,
-    <BiLogoReact size={50} color='#fff'/>,
-    <IoLogoNodejs size={50} color='#fff'/>,
-    <IoLogoHtml5 size={50} color='#fff'/>, 
-    <IoLogoCss3 size={50} color='#fff'/>,
-    <IoLogoJavascript size={50} color='#fff'/>,
-    <BiLogoReact size={50} color='#fff'/>,
-    <IoLogoNodejs size={50} color='#fff'/>,
-    <IoLogoNodejs size={50} color='#fff'/>,
-    <IoLogoHtml5 size={50} color='#fff'/>, 
-    <IoLogoCss3 size={50} color='#fff'/>,
-    <IoLogoJavascript size={50} color='#fff'/>,
-    <BiLogoReact size={50} color='#fff'/>,
-    <IoLogoNodejs size={50} color='#fff'/>,
-    <IoLogoNodejs size={50} color='#fff'/>,
-    <IoLogoNodejs size={50} color='#fff'/>,
-    <IoLogoHtml5 size={50} color='#fff'/>, 
-    <IoLogoCss3 size={50} color='#fff'/>,
-    <IoLogoJavascript size={50} color='#fff'/>,
-    <BiLogoReact size={50} color='#fff'/>,
-    <IoLogoNodejs size={50} color='#fff'/>,
-  ];
-
+  
 
   return (
       <main className="">
