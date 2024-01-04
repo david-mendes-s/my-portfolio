@@ -9,7 +9,7 @@ interface ICarrossel {
 export default function Carrossel({elements, width}: ICarrossel) {
 
 
-  const scrollers = useRef([]); // Cria um array de refs
+  const scrollers = useRef<any>([]); // Cria um array de refs
   /* const scroller = document.querySelectorAll(".scroller"); */
 
   useEffect(() => {
@@ -19,7 +19,7 @@ export default function Carrossel({elements, width}: ICarrossel) {
   }, []); // Roda o efeito apenas uma vez na montagem
 
   function addAnimation() {
-    scrollers.current.forEach((element) => {
+    scrollers.current.forEach((element:any) => {
       if (element) {
         element.setAttribute("data-animated", true);
       }
