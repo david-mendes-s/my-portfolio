@@ -6,8 +6,8 @@ interface ICarrossel {
     width: string,
 }
 
-interface ScrollerElement extends HTMLElement {
-  setAttribute(name: string, value: string): void;
+interface ScrollerElement {
+  setAttribute(name: string, value: boolean): void;
 }
 
 export default function Carrossel({elements, width}: ICarrossel) {
@@ -23,9 +23,9 @@ export default function Carrossel({elements, width}: ICarrossel) {
   }, []); // Roda o efeito apenas uma vez na montagem
 
   function addAnimation() {
-    scrollers.current?.forEach((element: any | never) => {
+    scrollers.current?.forEach((element) => {
       if (element) {
-        element?.setAttribute("data-animated", "true");
+        element?.setAttribute("data-animated", true);
       }
     });
   }
@@ -35,7 +35,7 @@ export default function Carrossel({elements, width}: ICarrossel) {
       {/* Associa as refs aos elementos */}
       <div
         className={`max-w-[${width}px] scroller px-2`}
-        ref={(el) => (scrollers.current[0] = el as ScrollerElement)}
+        ref={(el) => (scrollers.current[0] = el as HTMLDivElement)}
       >
         <ul className="flex gap-4 scroll_inner">
             {elements.map((element, index) => (
