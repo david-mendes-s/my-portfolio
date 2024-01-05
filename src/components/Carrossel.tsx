@@ -24,8 +24,9 @@ export default function Carrossel({elements, width}: ICarrossel) {
   function addAnimation() {
     scrollers.current?.forEach((element) => {
       if (element) {
-        (element as ScrollerElement).setAttribute("data-animated", "true"); // Cast
-      }
+        element.dataset = {
+          data-animated: "true",
+        };
     });
   }
 
