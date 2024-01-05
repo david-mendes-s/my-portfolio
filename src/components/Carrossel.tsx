@@ -12,7 +12,6 @@ interface ScrollerElement extends HTMLElement {
 
 export default function Carrossel({elements, width}: ICarrossel) {
 
-
   const scrollers = useRef<ScrollerElement[]>([]); // Cria um array de refs
   /* const scroller = document.querySelectorAll(".scroller"); */
 
@@ -23,11 +22,13 @@ export default function Carrossel({elements, width}: ICarrossel) {
   }, []); // Roda o efeito apenas uma vez na montagem
 
   function addAnimation() {
-    scrollers.current?.forEach((element) => {
-     
-        element.setAttribute("data-animated", "true")
-      
-    });
+    if(scrollers.current !== null){
+      scrollers.current?.forEach((element) => {
+        if (element) {
+          element.setAttribute("data-animated", "true")
+        }
+      });
+    }
   }
 
   return (
