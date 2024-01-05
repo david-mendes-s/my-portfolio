@@ -22,13 +22,11 @@ export default function Carrossel({elements, width}: ICarrossel) {
   }, []); // Roda o efeito apenas uma vez na montagem
 
   function addAnimation() {
-    if(scrollers.current !== null){
-      scrollers.current?.forEach((element) => {
-        if (element) {
-          element.setAttribute("data-animated", "true")
-        }
-      });
-    }
+    scrollers.current?.forEach((element) => {
+      if (element) {
+        (element as ScrollerElement).setAttribute("data-animated", "true"); // Cast
+      }
+    });
   }
 
   return (
